@@ -1,4 +1,4 @@
-# hyva-themes/magento2-react-checkout-offline-payments
+# magento2-hyva-react-checkout-offline-payments
 
 Magento 2 offline payment method renderers for [Hyvä React Checkout][hyva-react-checkout]
 
@@ -66,5 +66,5 @@ Special thanks to integer_net for building the initial release of this Magento2 
 BSD 3-Clause License. Please see [License File](LICENSE.txt) for more information.
 
 [link-author]: https://github.com/rajeev-k-tomy
-[hyva-react-checkout]: https://github.com/hyva-themes/magento2-hyva-checkout
+[hyva-react-checkout]: https://github.com/hyva-themes/magento2-react-checkout
 [example-template]: https://github.com/hyva-themes/magento2-checkout-example
