@@ -1,19 +1,19 @@
 import React, { useEffect, useCallback, useRef } from 'react';
 import _get from 'lodash.get';
 import { shape, func } from 'prop-types';
+import { __ } from '@hyva/react-checkout/i18n';
+import Card from '@hyva/react-checkout/components/common/Card';
+import TextInput from '@hyva/react-checkout/components/common/Form/TextInput';
+import RadioInput from '@hyva/react-checkout/components/common/Form/RadioInput';
 
-import Card from '../../../../../components/common/Card/Card';
-import TextInput from '../../../../../components/common/Form/TextInput';
-import RadioInput from '../../../../../components/common/Form/RadioInput';
 import {
   useOfflineCheckoutFormContext,
   useOfflinePaymentMethodFormContext,
 } from '../../hooks';
-import { __ } from '../../../../../i18n';
 import { poNumberField } from './utility';
 import { usePurchaseOrderAppContext } from './hooks';
+import { paymentMethodShape } from '../../../../amla/utility';
 import { usePerformPlaceOrderByREST } from '../../../../../hook';
-import { paymentMethodShape } from '../../../../../utils/payment';
 
 function PurchaseOrder({ method, selected, actions }) {
   const poNumberFieldSetRef = useRef();

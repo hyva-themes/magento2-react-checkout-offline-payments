@@ -1,6 +1,5 @@
 import { useContext } from 'react';
-
-import { PaymentMethodFormContext } from '../../../../components/paymentMethod/context';
+import { PaymentMethodFormContext } from '@hyva/react-checkout/components/paymentMethod';
 
 export default function useOfflinePaymentMethodFormContext() {
   const {
