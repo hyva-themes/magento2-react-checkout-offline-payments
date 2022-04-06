@@ -1,4 +1,4 @@
-# magento2-hyva-react-checkout-offline-payments
+# magento2-react-checkout-offline-payments
 
 Magento 2 offline payment method renderers for [Hyvä React Checkout][hyva-react-checkout]
 
