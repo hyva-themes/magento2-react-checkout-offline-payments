@@ -1,4 +1,4 @@
-import PurchaseOrder from './src/components/purcahseOrder';
+import PurchaseOrder from './src/components/purchaseOrder';
 
 const offlinePaymentRenderers = {
   purchaseorder: PurchaseOrder,
