@@ -43,9 +43,6 @@ Magento 2 offline payment method renderers for [Hyvä React Checkout][hyva-react
 
 Magento 2 offline methods are Check / Money order, Bank transfer, Cash on delivery and Purchase order. All methods are now supported.
 
-However, if you use the branch [hyva-checkout-example-template](https://github.com/hyva-themes/magento2-react-checkout-offline-payments/tree/hyva-checkout-example-template), then it only supports purchase order method at the moment. Rest of the methods needs to be modified to make it work with the example-template module.
-
-
 ## More Reading
 
 - If you have any doubts about the building the react app, then **[read more about it here](https://hyva-themes.github.io/magento2-react-checkout/build/)**.
