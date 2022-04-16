@@ -1,4 +1,4 @@
-import RootElement from '../../../../../../utils/rootElement';
+import RootElement from '@hyva/react-checkout/utils/rootElement';
 
 const paymentConfig = RootElement.getPaymentConfig();
 
