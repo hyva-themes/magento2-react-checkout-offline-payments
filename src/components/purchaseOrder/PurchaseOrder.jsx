@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useRef } from 'react';
-import _get from 'lodash.get';
+import { get as _get } from 'lodash-es';
 import { shape, func } from 'prop-types';
 
 import { __ } from '@hyva/react-checkout/i18n';
