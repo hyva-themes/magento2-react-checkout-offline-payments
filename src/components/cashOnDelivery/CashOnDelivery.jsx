@@ -1,10 +1,10 @@
 import React from 'react';
 import { shape, func } from 'prop-types';
 
-import Card from '../../../../../components/common/Card/Card';
-import RadioInput from '../../../../../components/common/Form/RadioInput';
+import Card from '@hyva/react-checkout/components/common/Card/Card';
+import RadioInput from '@hyva/react-checkout/components/common/Form/RadioInput';
+import { paymentMethodShape } from '@hyva/react-checkout/utils/payment';
 import { codConfig } from './utility';
-import { paymentMethodShape } from '../../../../../utils/payment';
 
 function CashOnDelivery({ method, selected, actions }) {
   const isSelected = method.code === selected.code;
