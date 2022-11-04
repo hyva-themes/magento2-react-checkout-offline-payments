@@ -4,7 +4,7 @@ Magento 2 offline payment method renderers for [Hyvä React Checkout][hyva-react
 
 ## Prerequisites
 
-1.  **[Hyvä Checkout][hyva-react-checkout]** is installed and setup with your Magento site.
+1.  **[Hyvä React Checkout][hyva-react-checkout]** (version >= 1.0.8) is installed and setup with your Magento site.
 
 ## Installation steps
 
@@ -19,24 +19,21 @@ Magento 2 offline payment method renderers for [Hyvä React Checkout][hyva-react
     },
     ```
 
-    Please note if you want to use this with [Hyvä React Checkout Example][example-template] module, then use the below config setting.
-
-    ```
-    "config": {
-        "paymentMethodsRepo": {
-            "offline": "git@github.com:hyva-themes/magento2-react-checkout-offline-payments.git -b hyva-checkout-example-template"
-        }
-    },
-    ```
-
 2. Run `npm install`. This will do all necessary setup for you.
 3. Run `npm run build` to build a new version of the build js file which will now include this payment renderer.
-4. You can include following translations through your Hyvä React Checkout module.
+4. You can include following translations via layout xml file.
 
-    File: `i18n/en_US.csv`
+    File: `view/frontend/layout/hyvareactcheckout_reactcheckout_index.xml`
     ```
-    "Purchase Order Number","Purchase Order Number"
-    "Please provide your purchase order number.","Please provide your purchase order number."
+    <referenceBlock name="checkout.translations">
+        <arguments>
+            <argument name="checkout_translations" xsi:type="array">
+                <item name="hyva_react_checkout_offline" xsi:type="string">
+                    <![CDATA[urchase Order Number,Purchase order number is a required field.,Make Check payable to:,Send Check to:]]>
+                </item>
+            </argument>
+        </arguments>
+    </referenceBlock>
     ```
 
 ## Supported Offline Payment Methods
