@@ -1,19 +1,19 @@
 import React, { useEffect, useCallback, useRef } from 'react';
-import _get from 'lodash.get';
+import { get as _get } from 'lodash-es';
 import { shape, func } from 'prop-types';
 
+import { __ } from '@hyva/react-checkout/i18n';
 import Card from '@hyva/react-checkout/components/common/Card/Card';
+import { usePerformPlaceOrderByREST } from '@hyva/react-checkout/hook';
+import { paymentMethodShape } from '@hyva/react-checkout/utils/payment';
 import TextInput from '@hyva/react-checkout/components/common/Form/TextInput';
 import RadioInput from '@hyva/react-checkout/components/common/Form/RadioInput';
 
-import { __ } from '@hyva/react-checkout/i18n';
-import { usePerformPlaceOrderByREST } from '@hyva/react-checkout/hook';
-import { paymentMethodShape } from '@hyva/react-checkout/utils/payment';
-import { poNumberField } from './utility';
 import {
   useOfflineCheckoutFormContext,
   useOfflinePaymentMethodFormContext,
 } from '../../hooks';
+import { poNumberField } from './utility';
 import { usePurchaseOrderAppContext } from './hooks';
 
 function PurchaseOrder({ method, selected, actions }) {
@@ -29,7 +29,7 @@ function PurchaseOrder({ method, selected, actions }) {
       const poNumber = _get(values, poNumberField);
 
       if (!poNumber) {
-        setErrorMessage(__('Please provide your purchase order number.'));
+        setErrorMessage(__('Purchase order number is a required field.'));
         setFieldTouched(poNumberField);
         if (poNumberFieldSetRef.current) {
           const textInputDOM =
