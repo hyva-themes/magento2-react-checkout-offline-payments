@@ -29,7 +29,7 @@ Magento 2 offline payment method renderers for [Hyvä React Checkout][hyva-react
         <arguments>
             <argument name="checkout_translations" xsi:type="array">
                 <item name="hyva_react_checkout_offline" xsi:type="string">
-                    <![CDATA[urchase Order Number,Purchase order number is a required field.,Make Check payable to:,Send Check to:]]>
+                    <![CDATA[Purchase Order Number,Purchase order number is a required field.,Make Check payable to:,Send Check to:]]>
                 </item>
             </argument>
         </arguments>
