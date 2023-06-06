@@ -2,17 +2,23 @@ import React from 'react';
 import { shape, func } from 'prop-types';
 
 import Card from '@hyva/react-checkout/components/common/Card/Card';
-import RadioInput from '@hyva/react-checkout/components/common/Form/RadioInput';
 import { paymentMethodShape } from '@hyva/react-checkout/utils/payment';
+import RadioInput from '@hyva/react-checkout/components/common/Form/RadioInput';
+
 import { bankTransferConfig } from './utility';
+import { useOfflinePerformPlaceOrder } from '../../hooks';
 
 function BankTransfer({ method, selected, actions }) {
-  const isSelected = method.code === selected.code;
+  const methodCode = method.code;
+
+  useOfflinePerformPlaceOrder(methodCode);
+
+  const isSelected = methodCode === selected.code;
 
   if (!isSelected) {
     return (
       <RadioInput
-        value={method.code}
+        value={methodCode}
         label={method.title}
         name="paymentMethod"
         checked={isSelected}
@@ -25,7 +31,7 @@ function BankTransfer({ method, selected, actions }) {
     <div>
       <div>
         <RadioInput
-          value={method.code}
+          value={methodCode}
           label={method.title}
           name="paymentMethod"
           checked={isSelected}
